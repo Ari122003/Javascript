@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Callbacks</title>
+	</head>
+	<body>
+		<div class="div">
+			<h1>I am Aritra</h1>
+			<h1>I am learning fullstack</h1>
+		</div>
+		<script>
+			function loadScript(src, callback) {
+				var script = document.createElement("script");
+
+				script.src = src;
+
+				setTimeout(
+					(insert = () => {
+						document.body.appendChild(script);
+					}),
+					5000
+				);
+
+				script.onload = function () {
+					console.log(`Script loaded with src: ${src}`);
+                    callback()
+				};
+			}
+
+			loadScript(
+				"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" , update
+			);
+
+			function update() {
+				let a = document.getElementsByClassName("div")[0].children[0];
+
+				a.insertAdjacentHTML("afterend", "<h1>Engineer</h1>");
+			}
+		</script>
+	</body>
+</html>

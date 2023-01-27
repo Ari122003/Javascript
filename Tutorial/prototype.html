@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prototypes</title>
+	</head>
+	<body>
+		<script>
+			let student = {
+				name: "Aritra",
+
+				dept: "ECE",
+
+				roll: 81,
+			};
+
+			//   prototype
+
+			let p1 = {
+				language: "Javascript",
+
+				run: (text) => {
+					alert(text);
+				},
+			};
+
+			student.__proto__ = p1;
+
+			p1.__proto__ = {
+				name: "Ari12",
+
+				fuck: (text) => {
+					alert(text);
+				},
+			};
+
+			student.fuck("Harder");
+
+			console.log(student.name);
+
+			student.run("Hello!!!");
+		</script>
+	</body>
+</html>

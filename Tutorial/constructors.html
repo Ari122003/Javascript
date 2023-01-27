@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Constructors</title>
+	</head>
+	<body>
+		<script>
+			class form {
+				constructor(yourname,yourcoach) {
+					
+                    this.Name=yourname
+                    this.Coach_Prefernace=yourcoach
+				}
+				submit(text) {
+					alert(text);
+				}
+
+
+                cancel(text){
+                    alert(text)
+                    this.Coach_Prefernace=null
+                }
+			}
+
+			let a = new form("Aritra","S2");
+			a.submit(`${a.Name} Your form is submitted for coach ${a.Coach_Prefernace}`);
+            console.log(a)
+
+			let p = new form("Piri","S5");
+			p.submit(`${p.Name} Your form is submitted for coach ${p.Coach_Prefernace}`);
+            console.log(p)
+
+
+            p.cancel(`${p.Name} Your form is cancelled for coach ${p.Coach_Prefernace}`)
+            console.log(p)
+		</script>
+	</body>
+</html>

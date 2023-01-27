@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco bulb</title>
+
+    <style>
+        #div{
+            height:200px;
+            display:flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #bulb{
+            
+            height: 200px;
+            width:300px;
+            border:2px solid black;
+            text-align: center;
+    
+        }
+
+        h2{
+            margin-top: 30%;
+            color:b ;
+        }
+    </style>
+</head>
+<body>
+        <div id="div">
+            <div id="bulb">
+               <h2>DJ</h2>
+            </div>
+        </div>
+
+        <script>
+
+      let colors=["red","blue","green","yellow","cyan","violet","purple","orange","pink","magenta","brown","darkgreen","crimson","blueviolet"]
+
+       const change=()=>{
+         let c=colors[Math.floor(Math.random()*colors.length)]
+        document.body.style.background=c
+
+       }
+       
+
+    //    setInterval(change,200)
+
+
+
+
+
+
+
+
+        </script>
+</body>
+</html>

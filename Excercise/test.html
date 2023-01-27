@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+
+		<input type="text" id="input">
+		<script>
+
+			
+
+			const options = {
+				method: "GET",
+				headers: {
+					"X-RapidAPI-Key":
+						"4fe0237a16msh79b05c35d4cc929p15d943jsnf54c7ff59c05",
+					"X-RapidAPI-Host": "dictionary-by-api-ninjas.p.rapidapi.com",
+				},
+			};
+
+			fetch(
+				`https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary?word=walk`,
+				options
+			).then(function(response){
+				console.log(response)
+				console.log(response.json())
+                 return response.json()
+			}).then(function(result){
+				console.log(result)
+			})
+				
+		</script>
+	</body>
+</html>

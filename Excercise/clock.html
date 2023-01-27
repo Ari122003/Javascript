@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Digital clock</title>
+		<style>
+			#box{
+				display:flex;
+				justify-content: center;
+				background-color: rgb(223, 21, 159);
+				height:200px;
+			}
+			#clock{
+				background-color: rgb(243, 189, 243);
+				width:200px;
+				display: flex;
+				justify-content: center;
+				border: 4px solid rgb(109, 18, 142);
+				border-radius: 100px;
+				
+			}
+
+			.digit{
+				margin-top:35%;
+				padding:10px;
+				font-size: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		<div id="clock">
+			<div id="h" class="digit"></div>
+			<div id="m" class="digit"></div>
+			<div id="s" class="digit"></div>
+		</div>
+		</div>
+
+		<script>
+			let d = new Date();
+
+			let a = document.getElementById("h");
+			let b = document.getElementById("m");
+			let c = document.getElementById("s");
+
+			let hour = new Promise(function (resolve, reject) {
+				setInterval(function () {
+					let d = new Date();
+					let h = d.getHours();
+
+					a.innerText = `${h}\t\t:`;
+				}, 1000);
+			});
+
+			let sec = new Promise(function (resolve, reject) {
+				setInterval(function () {
+					let d = new Date();
+					let s = d.getSeconds();
+
+					c.innerText = `${s}`;
+				}, 1000);
+			});
+
+			let mins = new Promise(function (resolve, reject) {
+				setInterval(function () {
+					let d = new Date();
+					let m = d.getMinutes();
+
+					b.innerText = `${m}\t:`;
+				}, 1000);
+			});
+		</script>
+	</body>
+</html>

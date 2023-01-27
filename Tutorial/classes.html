@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Classes</title>
+	</head>
+	<body>
+		<script>
+			class form {
+				submit(text) {
+					alert(text);
+				}
+
+				cancle = (text) => {
+					alert(text);
+				};
+
+				fill(entername, enterroll) {
+					this.name = entername;
+					this.roll = enterroll;
+				}
+			}
+
+			let aritra = new form();
+			let piri = new form();
+
+			aritra.fill("Aritra", 81);
+			aritra.submit(`${aritra.name} your form is submitted and your roll is ${aritra.roll}`);
+
+			piri.fill("Piri", 45);
+			piri.submit(`${piri.name} your form is submitted and your roll is ${piri.roll}`);
+			piri.cancle("Piri your form is cancled");
+
+			console.log(aritra);
+			console.log(piri);
+		</script>
+	</body>
+</html>

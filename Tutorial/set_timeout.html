@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set timeout and Set Iterval</title>
+</head>
+<body>
+    <div id="ari">
+        <p>I am Aritra</p>
+    </div>
+
+
+
+
+ <script>
+
+ let a=document.getElementById("ari")
+
+
+
+ const display=(x,y)=>{
+
+    a.insertAdjacentHTML("beforeend","<p>I am a Develeoper</p>")
+     
+    a.append(x+y)
+      
+
+ }
+
+//   let b=setTimeout(display,5000,5,8)
+//  clearTimeout(b)
+
+let t=setInterval(display,2000,4,7)
+// clearInterval(t)
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

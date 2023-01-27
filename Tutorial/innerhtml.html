@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML and Outer HTML</title>
+</head>
+<body>
+    <div  id="div1">
+        <span>
+            <p>Aritra Adhikary</p>
+        </span>
+        <section>
+            <p>Developer</p>
+        </section>
+    </div>
+
+    <div id="div2">
+        
+        <article> 
+            Programmer
+        </article>
+        <caption>
+            Javascript
+        </caption>
+    </div>
+    <script>
+      
+      console.log(document.body.firstElementChild.children[0].nodeName)
+
+      console.log(document.body.children[1].children[0].nodeName)
+
+      console.log(document.getElementsByTagName("section"))
+
+
+
+
+      console.log(div1.innerHTML)
+
+      div1.children[0].innerHTML= "<p> Hi I am Aritra Adhikary</p>"
+
+      console.log(div1.innerHTML)
+
+
+
+
+      console.log(div2.outerHTML)
+
+      div2.outerHTML="<p>Python</p>"
+
+      console.log(document.body.innerHTML)
+
+
+console.log(document.body.textContent)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

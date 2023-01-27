@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Async and Await</title>
+	</head>
+	<body>
+		<script>
+			async function weather() {
+				let kolkata = new Promise(function (resolve, reject) {
+					setTimeout(function () {
+						resolve("Kolkata's temp is 13 degrees");
+					}, 5000);
+				});
+
+				let mumbai = new Promise(function (resolve, reject) {
+					setTimeout(function () {
+						resolve("Mumbai's temp is 15 degrees");
+					},9000);
+				});
+
+				// kolkata.then(function (text) {
+				// 	console.log(text);
+				// });
+
+				// mumbai.then(function (text) {
+				// 	console.log(text);
+				// });
+
+                 console.log("Fetching Kolkata's weather")
+                let k = await kolkata
+                console.log("Kolkata's weather is fetched: "+k)
+
+                console.log("Fetching Mumbai's weather")
+                let m = await mumbai
+                console.log("Mumbai's weather is fetched: "+m)
+
+                return [k,m]
+			}
+
+       function display(){
+
+        console.log("Hello")
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+			console.log("Welcome to wether control room");
+
+	      let w = weather()
+          display()
+          w.then(function(text){
+            console.log(text)
+          })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>
